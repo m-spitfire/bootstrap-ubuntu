@@ -88,7 +88,7 @@ pipinstall() { \
 releaseinstall() { \
     progname="$(echo "$1" | awk -F / '{ print $5 }')"
     dialog --title "Installation" --infobox "Installing \`$progname\` ($n of $total) via GitHub releases. $progname $2" 5 70
-    curl -L $1 | tar xzC ~/.local/bin
+    curl -L $1 | tar xzC /usr/bin
 }
 
 debinstall() { \
@@ -96,7 +96,7 @@ debinstall() { \
     dialog --title "Installation" --infobox "Installing \`$progname\` ($n of $total) via deb package. $progname $2" 5 70
     curl -L $1 | dpgk -i
 }
-    
+
 
 installationloop() { \
     ([ -f "$progsfile" ] && cp "$progsfile" /tmp/progs.csv) || curl -Ls "$progsfile" | sed '/^#/d' > /tmp/progs.csv
@@ -195,4 +195,3 @@ newperms "%wheel ALL=(ALL) ALL #LARBS
 # Last message! Install complete!
 finalize
 clear
-
