@@ -2,5 +2,5 @@
 
 based on [LARBS](https://github.com/lukesmithxyz/LARBS)
 
-see [LICENSE](LICENSE) for license. (this comes without warranty)
+see [COPYING](COPYING) for license. (this comes without warranty)
 
