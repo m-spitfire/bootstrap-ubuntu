@@ -4,8 +4,6 @@
 # by Murad Bashirov <carlsonmu@gmail.com>
 # License: GNU GPLv3
 
-echo "THIS IS NOT COMPLETE YET PLEASE ADD DOTFILESREPO" && exit 1
-
 ### OPTIONS AND VARIABLES ###
 
 while getopts ":r:b:p:h" o; do case "${o}" in
@@ -16,7 +14,7 @@ while getopts ":r:b:p:h" o; do case "${o}" in
     *) printf "Invalid option: -%s\\n" "$OPTARG" && exit 1 ;;
 esac done
 
-[ -z "$dotfilesrepo" ] && dotfilesrepo=""
+[ -z "$dotfilesrepo" ] && dotfilesrepo="https://github.com/spitfire-hash/dotfiles.git"
 [ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/spitfire-hash/bootstrap-ubuntu/master/progs.csv"
 [ -z "$repobranch" ] && repobranch="master"
 
